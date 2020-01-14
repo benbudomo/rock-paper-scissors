@@ -4,7 +4,7 @@ In this project, I will be developing a simple implementation of "Rock Paper Sci
 
 ## Information and Goals
 
-* Create a blank HTML document with a script tag. The game will be played completely from the console - No front end at the moment except for a button that starts the game.
+* Create a blank HTML document with a script tag. The game will be played completely from the console – No front end at the moment except for a button that starts the game.
 
 * The game will be played against the computer, so the program begins with a function that randomly returns 'Rock,' 'Paper,' or 'Scissors.'
 
@@ -22,9 +22,9 @@ In this project, I will be developing a simple implementation of "Rock Paper Sci
 
 * [The Odin Project's Web Development 101](https://www.theodinproject.com/lessons/rock-paper-scissors) – Project based on this online course
 
-* [Rock Paper Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors)
+* [Rock Paper Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors) – Game tutorial and other information
 
-* [Visual Studio Code]( https://code.visualstudio.com/) - Integrated Development Environment (IDE)
+* [Visual Studio Code]( https://code.visualstudio.com/) – Integrated Development Environment (IDE)
 
 ## Authors
 
