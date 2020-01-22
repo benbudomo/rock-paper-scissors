@@ -24,7 +24,7 @@ In this project, I will be developing a simple implementation of "Rock Paper Sci
 
 * [Rock Paper Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors) – Game tutorial and other information
 
-* [Visual Studio Code]( https://code.visualstudio.com/) – Integrated Development Environment (IDE)
+* [Visual Studio Code]( https://code.visualstudio.com/)
 
 ## Authors
 
