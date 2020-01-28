@@ -28,4 +28,4 @@ In this project, I will be developing a simple implementation of "Rock Paper Sci
 
 ## Authors
 
-* **[Ben Budomo](https://github.com/benbudomo)** - *Dev Padawan*
+* **[Ben Budomo](https://github.com/benbudomo)**
