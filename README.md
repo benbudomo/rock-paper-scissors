@@ -2,6 +2,8 @@
 
 In this project, I will be developing a simple implementation of "Rock Paper Scissors." The game will be played on the browser console for now, but I will be revisiting this project in the near future to implement a front end. 
 
+Update – Front end currently being created.
+
 ## Information and Goals
 
 * Create a blank HTML document with a script tag. The game will be played completely from the console – No front end at the moment except for a button that starts the game.
