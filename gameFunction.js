@@ -2,19 +2,24 @@
 let playerScore = 0;
 let computerScore = 0;
 
-function game () {
+rock.addEventListener('click', function (e) {
+    playerSelection = 'Rock';
+    game();
+});
+
+function game() {
 
     alert('Thanks for playing Rock Paper Scissors! Click OK to continue.')
 
-    for (let i = 0; i < 5; i++) {
-        let askUser = prompt('Rock, Paper, or Scissors?', '');
-        playerSelection = (askUser.charAt(0).toUpperCase() + askUser.substr(1).toLowerCase())
+    // for (let i = 0; i < 5; i++) {
+        // let askUser = prompt('Rock, Paper, or Scissors?', '');
+        // playerSelection = (askUser.charAt(0).toUpperCase() + askUser.substr(1).toLowerCase())
         
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
         console.log('Player Score: ' + playerScore);
         console.log('Computer Score: ' + computerScore);
-    }
+    // }
 
     if (playerScore > computerScore) {
         console.log(`You Win! Final Score: ${playerScore} to ${computerScore}`);
