@@ -1,37 +1,50 @@
 
 let playerScore = 0;
 let computerScore = 0;
+let computerTrackScore = 0;
+let playerTrackScore = 0;
+let tieTrackScore = 0;
 
 rock.addEventListener('click', function (e) {
     playerSelection = 'Rock';
     game();
 });
 
+paper.addEventListener('click', function (e) {
+    playerSelection = 'Paper';
+    game();
+});
+
+scissors.addEventListener('click', function (e) {
+    playerSelection = 'Scissors';
+    game();
+});
+
 function game() {
-
-    alert('Thanks for playing Rock Paper Scissors! Click OK to continue.')
-
-    // for (let i = 0; i < 5; i++) {
-        // let askUser = prompt('Rock, Paper, or Scissors?', '');
-        // playerSelection = (askUser.charAt(0).toUpperCase() + askUser.substr(1).toLowerCase())
         
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log('Player Score: ' + playerScore);
-        console.log('Computer Score: ' + computerScore);
-    // }
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+    console.log('Player Score: ' + playerScore);
+    console.log('Computer Score: ' + computerScore);
 
-    if (playerScore > computerScore) {
-        console.log(`You Win! Final Score: ${playerScore} to ${computerScore}`);
-    }
 
-    else if (playerScore < computerScore) {
-        console.log(`You Lose! Final Score: ${playerScore} to ${computerScore}`);
-    }
+    if(computerTrackScore + playerTrackScore + tieTrackScore === 5){
+        document.getElementById("rock").disabled = true; 
+        document.getElementById("paper").disabled = true; 
+        document.getElementById("scissors").disabled = true; 
 
-    else {
-        console.log(`It\'s a Tie! Final Score: ${playerScore} to ${computerScore}`);
-    }
+        if(playerScore > computerScore){
+            console.log(`You Win! Final Score: ${playerScore} to ${computerScore}`);
+        }
+        else if(playerScore < computerScore){
+            console.log(`You Lose! Final Score: ${playerScore} to ${computerScore}`);
+        }
+        else {
+            console.log(`It\'s a tie! Final Score: ${playerScore} to ${computerScore}`);
+        }
+    } 
+
+    
 
 }
 
@@ -48,16 +61,19 @@ function playRound(playerSelection, computerSelection) {
     //If Player picks Rock
     if (playerSelection == 'Rock' && computerSelection == 'Paper') {
         ++computerScore;
+        ++computerTrackScore;
         return 'You Lose! Paper Beats Rock. Try Again!';
         
     }
 
-    else if ( playerSelection == 'Rock' && computerSelection == 'Scissors') {
+    else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
         ++playerScore;
+        ++playerTrackScore;
         return 'You Win! Rock Beats Scissors' 
     }
 
     else if (playerSelection == 'Rock' && computerSelection == 'Rock') {
+        ++tieTrackScore;
         return 'It\'s a Tie!';
     }
 
@@ -68,26 +84,31 @@ function playRound(playerSelection, computerSelection) {
 
     else if ( playerSelection == 'Paper' && computerSelection == 'Scissors') {
         ++computerScore;
+        ++computerTrackScore;
         return 'You Lose! Scissors Beats Paper';
     }
 
     else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
         ++playerScore
+        ++playerTrackScore;
         return 'You Win! Paper Beats Rock.';
     }
 
     // If Player picks Scissors
     if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
         ++playerScore
+        ++playerTrackScore;
         return 'You Win! Scissors Beats Paper.';
     }
 
     else if ( playerSelection == 'Scissors' && computerSelection == 'Scissors') {
+        ++tieTrackScore;
         return 'It\'s a Tie!';
     }
 
     else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
         ++computerScore;
+        ++computerTrackScore;
         return 'You Lose! Rock Beats Scissors.';
     }
 }
