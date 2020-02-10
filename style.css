@@ -1,0 +1,16 @@
+#wrapper {
+    margin-right: auto;
+    margin-left:  auto;
+
+    max-width: 960px;
+
+    padding-right: 10px;
+    padding-left:  10px;
+}
+
+#gameButton {
+    border-style: solid;
+    border-width: 5px;
+    text-align: center;
+    margin-top: 250px;
+}
