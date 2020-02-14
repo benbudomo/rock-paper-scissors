@@ -5,29 +5,11 @@ let computerTrackScore = 0;
 let playerTrackScore = 0;
 let tieTrackScore = 0;
 
-rock.addEventListener('click', function (e) {
-    playerSelection = 'Rock';
-    game();
-});
-
-paper.addEventListener('click', function (e) {
-    playerSelection = 'Paper';
-    game();
-});
-
-scissors.addEventListener('click', function (e) {
-    playerSelection = 'Scissors';
-    game();
-});
-
 // Starts the game
 function game() {
         
     const computerSelection = computerPlay();
     document.getElementById('gameMessages').innerHTML = (playRound(playerSelection, computerSelection));
-    // console.log('Player Score: ' + playerScore);
-    // console.log('Computer Score: ' + computerScore);
-
 
     if(computerTrackScore + playerTrackScore + tieTrackScore === 5){
         document.getElementById("rock").disabled = true; 
@@ -36,12 +18,17 @@ function game() {
 
         if(playerScore > computerScore){
             document.getElementById('gameMessages').innerHTML = `You Win! Final Score: ${playerScore} to ${computerScore}`;
+            document.getElementById("playAgain").style.display = null;
         }
         else if(playerScore < computerScore){
             document.getElementById('gameMessages').innerHTML = `You Lose! Final Score: ${playerScore} to ${computerScore}`;
+            document.getElementById("playAgain").style.display = null;
+
         }
         else {
             document.getElementById('gameMessages').innerHTML = `It\'s a tie! Final Score: ${playerScore} to ${computerScore}`;
+            document.getElementById("playAgain").style.display = null;
+
         }
     } 
 
@@ -52,7 +39,6 @@ function game() {
 // Randomly picks rock paper or scissors
 function computerPlay () {
     let computerArray = ['Rock', 'Paper', 'Scissors'];
-
     let computerDecision = Math.floor(Math.random()*computerArray.length)
     document.getElementById('computerPicks').innerHTML = ('Computer picks ' + computerArray[computerDecision]);
     return computerArray[computerDecision];
@@ -90,7 +76,7 @@ function playRound(playerSelection, computerSelection) {
     else if ( playerSelection == 'Paper' && computerSelection == 'Scissors') {
         ++computerScore;
         ++computerTrackScore;
-        document.getElementById('computerScore').innerHTML = 'Computer :' + computerScore;
+        document.getElementById('computerScore').innerHTML = 'Computer: ' + computerScore;
         return 'You Lose! Scissors Beats Paper';
     }
 
@@ -121,3 +107,43 @@ function playRound(playerSelection, computerSelection) {
         return 'You Lose! Rock Beats Scissors.';
     }
 }
+
+// Clicking functions
+// If clicked, starts game and player chooses this item
+rock.addEventListener('click', function (e) {
+    playerSelection = 'Rock';
+    game();
+});
+
+paper.addEventListener('click', function (e) {
+    playerSelection = 'Paper';
+    game();
+});
+
+scissors.addEventListener('click', function (e) {
+    playerSelection = 'Scissors';
+    game();
+});
+
+// Play again button that restarts game
+playAgain.addEventListener('click', function(e) {
+    playerScore = 0;
+    computerScore = 0;
+    computerTrackScore = 0;
+    playerTrackScore = 0;
+    tieTrackScore = 0;
+
+    document.getElementById("rock").disabled = false; 
+    document.getElementById("paper").disabled = false; 
+    document.getElementById("scissors").disabled = false; 
+
+    document.getElementById('computerPicks').innerHTML = 'Choose Rock Paper or Scissors.'
+
+    document.getElementById('gameMessages').innerHTML = 'Enjoy!';
+
+    document.getElementById('computerScore').innerHTML = 'Computer: ' + computerScore;
+    document.getElementById('userScore').innerHTML = 'You: ' + playerScore;
+
+    document.getElementById("playAgain").style.display = 'none';
+
+})
