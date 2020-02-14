@@ -8,9 +8,35 @@
     padding-left:  10px;
 }
 
+h1 {
+    text-align: center;
+}
+
 #gameButton {
     border-style: solid;
     border-width: 5px;
     text-align: center;
     margin-top: 250px;
 }
+
+#gameResults {
+    border-style: solid;
+    border-width: 5px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#userScore {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+#computerScore {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    padding-right: 50px;
+}
+
