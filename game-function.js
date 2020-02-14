@@ -62,6 +62,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'Rock' && computerSelection == 'Paper') {
         ++computerScore;
         ++computerTrackScore;
+        document.getElementById('computerAddPoint').innerHTML = computerScore;
         return 'You Lose! Paper Beats Rock. Try Again!';
         
     }
@@ -69,6 +70,7 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
         ++playerScore;
         ++playerTrackScore;
+        document.getElementById('userAddPoint').innerHTML = playerScore;
         return 'You Win! Rock Beats Scissors' 
     }
 
@@ -85,12 +87,14 @@ function playRound(playerSelection, computerSelection) {
     else if ( playerSelection == 'Paper' && computerSelection == 'Scissors') {
         ++computerScore;
         ++computerTrackScore;
+        document.getElementById('computerAddPoint').innerHTML = computerScore;
         return 'You Lose! Scissors Beats Paper';
     }
 
     else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
         ++playerScore
         ++playerTrackScore;
+        document.getElementById('userAddPoint').innerHTML = playerScore;
         return 'You Win! Paper Beats Rock.';
     }
 
@@ -98,6 +102,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
         ++playerScore
         ++playerTrackScore;
+        document.getElementById('userAddPoint').innerHTML = playerScore;
         return 'You Win! Scissors Beats Paper.';
     }
 
@@ -109,6 +114,7 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
         ++computerScore;
         ++computerTrackScore;
+        document.getElementById('computerAddPoint').innerHTML = computerScore;
         return 'You Lose! Rock Beats Scissors.';
     }
 }
