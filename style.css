@@ -9,7 +9,9 @@
 }
 
 body {
+    background-color: white;
     font-family: 'Roboto';
+    color: #080706;
 }
 
 h1 {
@@ -17,52 +19,90 @@ h1 {
 }
 
 #gameButton {
-    border-style: solid;
-    border-width: 5px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#rock {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+#rock:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#paper {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+  
+#paper:hover {
+    background-color: #008CBA;
+    color: white;
+}
+  
+#scissors {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+  
+#scissors:hover {
+    background-color: #f44336;
+    color: white;
 }
 
 #computerPicks {
-    border-style: solid;
-    border-width: 5px;
     text-align: center;
     margin-top: 25px;
 }
 
-#gameResults {
-    border-style: solid;
-    border-width: 5px;
+#scoreBoard {
     text-align: center;
-    margin-top: 25px;
+    padding: 25px;
 }
 
-#userScore {
-    border-style: solid;
-    border-right-width: 5px;
-    border-left-width: 5px;
-    display: inline-block;
-    padding-right: 25px;
+#userScore, #computerScore {
+  display: inline-block;
+  padding: 15px;
 }
-
-#computerScore {
-    border-style: solid;
-    border-right-width: 5px;
-    border-left-width: 5px;
-    display: inline-block;
-    padding-right: 25px;
+#userScore h4, #computerScore h4 {
+  font-weight: bold;
+}
+#userScoreBox, #computerScoreBox {
+  border: 3px solid black;
+  padding: 30px;
+  color: black;
 }
 
 #gameMessages {
-    border-style: solid;
-    border-width: 5px;
     text-align: center;
     margin-top: 25px;
 }
 
 #playAgain {
-    border-style: solid;
-    border-width: 5px;
     text-align: center;
-    margin-top: 25px;
 }
+
+#playAgainButton {
+    margin-top: 25px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+#playAgainButton:hover {
+    background-color: #E7E7E7;
+}
+
