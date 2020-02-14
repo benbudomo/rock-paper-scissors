@@ -8,6 +8,10 @@
     padding-left:  10px;
 }
 
+body {
+    font-family: 'Roboto';
+}
+
 h1 {
     text-align: center;
 }
@@ -16,7 +20,7 @@ h1 {
     border-style: solid;
     border-width: 5px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 100px;
 }
 
 #gameResults {
@@ -40,3 +44,14 @@ h1 {
     padding-right: 50px;
 }
 
+#userAddPoint {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+}
+
+#computerAddPoint {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+}
