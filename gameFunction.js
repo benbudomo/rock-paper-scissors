@@ -30,7 +30,6 @@ function game() {
         else if(playerScore < computerScore) {
             document.getElementById('gameMessages').innerHTML = `You Lose! Final Score: ${playerScore} to ${computerScore}`;
             document.getElementById('playAgain').style.display = null;
-
         }
         else {
             document.getElementById('gameMessages').innerHTML = `It\'s a tie! Final Score: ${playerScore} to ${computerScore}`;
